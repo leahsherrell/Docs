@@ -32,11 +32,30 @@ run $ npm install and $ bower install in terminal
 run $ gulp build and $ gulp serve
 
 ### For future Dev of Similar Projects
-- at first commit (same gulp file, script tag, export/require in back and front js files; don't need to have the css file) run these commands in terminal
+Initial npm(CEO), gulp(GM), browserify (interpreter for browser, creates build folder with app.js file)
   - npm init
   - npm install gulp --save-dev
   - npm install browserify --save-dev
   - npm install vinyl-source-stream --save-dev
+To concatinate front-end files into app.js:
+  - npm install gulp-concat --save-dev
+Makes files smaller and faster
+  - npm install gulp-uglify --save-dev
+Give us an environment variable (either development or production)
+  - npm install gulp-util --save-dev
+Able to delete tmp and build folder/file
+  - npm install del --save-dev
+Add linter (debugger)
+  - npm install jshint --save-dev
+  - npm install gulp-jshint --save-dev
+
+Front-end manager (bower)
+  - bower init
+Get jQuery
+  - bower install jquery --save
+Get Bootstrap
+  - bower install bootstrap --save
+
 
 ### License
 

@@ -7,6 +7,6 @@ Alarm.prototype.goOff = function(setTime, moment) {
   if (setTime === moment) {
     return true;
   }
-}
+};
 
 exports.alarmClockModule = Alarm;
