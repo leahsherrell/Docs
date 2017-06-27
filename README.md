@@ -31,7 +31,7 @@ run $ npm install and $ bower install in terminal
 
 run $ gulp build and $ gulp serve
 
-### For future Dev of Similar Projects
+### npm and bower Commands for future Dev of Similar Projects (with basic file structure at 2nd commit)
 Initial npm(CEO), gulp(GM), browserify (interpreter for browser, creates build folder with app.js file)
   - npm init
   - npm install gulp --save-dev
