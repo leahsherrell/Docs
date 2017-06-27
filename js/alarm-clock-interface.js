@@ -8,8 +8,8 @@ $(function() {
     var moment = 3;
     var newAlarm = new Alarm (setTime, moment);
 
-    // if (newAlarm.goOff(setTime, moment)) {
-    //   $('.alarm-display').show();
-    // }
+    if (newAlarm.goOff(setTime, moment)) {
+      $('.alarm-display').text('<p>Wake up</p>');
+    }
   });
 });
