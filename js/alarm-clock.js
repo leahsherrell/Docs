@@ -1,12 +1,14 @@
-function Alarm (setTime, moment) {
+var Alarm = function (setTime) {
   this.setTime = setTime;
-  this.moment = moment;
 }
 
-Alarm.prototype.goOff = function(setTime, moment) {
-  if (setTime === moment) {
-    return true;
-  }
+Alarm.prototype.goOff = function() {
+  var currentMoment = moment().format('HH:mm');
+  var setTime = this.setTime;
+  while(setTime.charAt(0) === '0') {
+     setTime = setTime.substr(1);
+     }
+     return setTime === currentMoment;
 };
 
 exports.alarmClockModule = Alarm;
