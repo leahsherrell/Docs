@@ -1,3 +1,5 @@
 $(document).ready(function(){
-  $('.moment').text(moment().format('HH:mm a'));
+  setInterval(function() {
+    $('.moment').text(moment().format('LTS'));
+  }, 1000);
 });

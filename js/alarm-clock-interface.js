@@ -3,13 +3,16 @@ var Alarm = require('./../js/alarm-clock.js').alarmClockModule;
 $(function() {
   $('#alarm').submit(function(event) {
     event.preventDefault();
-    // var currentMoment = moment().format('LT');
     var setTime = $('.setTime').val();
-    var newAlarm = new Alarm (setTime);
-    
-    if (newAlarm.goOff(setTime)) {
 
-      $('.alarm-display').show();
-    }
+    var newAlarm = new Alarm (setTime);
+
+    var alarmed = setInterval(function() {
+      if (newAlarm.goOff) {
+        $('.alarm-display').show();
+      }
+    }, 1000);
   });
 });
+
+// setInterval(function(){ alert("Hello"); }, 3000);
