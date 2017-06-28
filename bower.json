@@ -1,5 +1,5 @@
 {
-  "name": "alarm-clock",
+  "name": "template",
   "description": "#### Alarm Clock App using Node, Gulp and Bower",
   "main": "gulpfile.js",
   "license": "ISC",
