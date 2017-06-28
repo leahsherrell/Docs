@@ -7,12 +7,10 @@ $(function() {
 
     var newAlarm = new Alarm (setTime);
 
-    var alarmed = setInterval(function() {
-      if (newAlarm.goOff) {
+    setInterval(function() {
+      if (newAlarm.goOff()) {
         $('.alarm-display').show();
       }
     }, 1000);
   });
 });
-
-// setInterval(function(){ alert("Hello"); }, 3000);

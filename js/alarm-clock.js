@@ -3,9 +3,10 @@ var Alarm = function (setTime) {
 }
 
 Alarm.prototype.goOff = function() {
-   this.setTime === moment().format('HH:mm')) {
+   if (this.setTime === moment().format('HH:mm')) {
      return true;
   }
+  return false;
 };
 
 exports.alarmClockModule = Alarm;
