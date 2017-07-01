@@ -1,9 +1,9 @@
 {
-  "name": "template",
-  "description": "#### Alarm Clock App using Node, Gulp and Bower",
+  "name": "docs",
+  "description": "Find a nearby doctor who treats a specific condition",
   "main": "gulpfile.js",
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/leahsherrell/Docs.git",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,5 +15,8 @@
     "jquery": "^3.2.1",
     "bootstrap": "^3.3.7",
     "moment": "^2.18.1"
-  }
+  },
+  "authors": [
+    "Leah Sherrell <leahsherrell@icloud.com>"
+  ]
 }
