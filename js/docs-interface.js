@@ -1,1 +1,12 @@
-var Doctor = require('./../js/docs.js').doctorModule;
+var DocOptions = require('./../js/docs.js').docOptionsModule;
+var apiKey = require('./../.env').apiKey;
+
+$(function() {
+  $('#doctorSearch').submit(function(event) {
+    event.preventDefault();
+
+    var condition = $('#condition').val();
+    var newList = new DocOptions();
+    newList.getDoctors(condition, apiKey);
+  });
+});
