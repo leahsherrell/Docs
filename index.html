@@ -2,22 +2,25 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="build/css/styles.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
   </head>
   <body>
     <div class="container">
-      <h1>Doctor Search</h1>
-      <h3>Find a Doctor Near You</h3>
-      <h5>Search by Medical Condition</h5>
-      <form id="doctorSearch">
-        <div class="form-group">
-          <label for="condition">Symptom or Medical Issue</label>
-          <input id="condition" type="text" name="condition">
-          <button class="btn-success" type="submit">Submit</button>
-        </div>
-      </form>
-      <ul id="listOfDocs"></ul>
+      <div class="main">
+        <h1><span class=text-readability>Doctor Search</span></h1>
+        <h3><span class=text-readability>Find a Doctor Near You</span class=text-readability></h3>
+          <h4><span class=text-readability>Search by Medical Condition Treated</span></h4>
+          <form id="doctorSearch">
+            <div class="form-group">
+              <label for="condition"></label>
+              <input class="form-control" id="condition" type="text" name="condition">
+              <button class="btn-success" type="submit">Submit</button>
+            </div>
+          </form>
+          <ul id="listOfDocs"></ul>
+      </div>
     </div>
   </body>
 </html>
