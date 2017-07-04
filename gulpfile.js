@@ -5,6 +5,8 @@ var source = require('vinyl-source-stream');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var utilities = require('gulp-util');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var buildProduction = utilities.env.production;
 var browserSync = require('browser-sync').create();
 var jshint = require('gulp-jshint');
@@ -68,6 +70,15 @@ gulp.task("build", ['clean'], function(){
   gulp.start('bower');
 });
 
+gulp.task('cssBuild', function() {
+  return gulp.src(['scss/*.scss'])
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./build/css'))
+    .pipe(browserSync.stream());
+});
+
 gulp.task('serve', function() {
   browserSync.init({
     server: {
@@ -77,6 +88,7 @@ gulp.task('serve', function() {
   });
   gulp.watch(['js/*.js'], ['jsBuild']);
   gulp.watch(['bower.json'], ['bowerBuild']);
+  gulp.watch(["scss/*.scss"], ['cssBuild']);
   gulp.watch(['*.html'], ['htmlBuild']);
 });
 
