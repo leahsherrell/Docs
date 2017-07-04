@@ -61,7 +61,7 @@ gulp.task('bowerCSS', function () {
     .pipe(gulp.dest('./build/css'));
 });
 
-gulp.task("build", ['clean'], function(){
+gulp.task("build", ['clean', 'cssBuild'], function(){
   if (buildProduction) {
     gulp.start('minifyScripts');
   } else {
