@@ -12,7 +12,7 @@ DocOptions.prototype.getDoctors = function(medicalIssue, apiKey) {
       $('#listOfDocs').append('<li>Sorry, no doctors found.</li>')
     } else {
       for (i=0; i<result.data.length; i++) {
-        $('#listOfDocs').append('<li>' + '<h4>' + result.data[i].profile.first_name + ' ' + result.data[i].profile.last_name + '<h4>' + '</li>');
+        $('#listOfDocs').append('<li>' + '<div class="col-sm-6"><h3>Dr. ' + result.data[i].profile.first_name + ' ' + result.data[i].profile.last_name + ', ' + result.data[i].profile.title + '</h3>' + '<p>' + result.data[i].specialties[0].description + '</p></div>' + '<div class="col-sm-6"><img src = "' + result.data[i].profile.image_url + '"' + '></div></li>');
         console.log(result);
       }
     }
