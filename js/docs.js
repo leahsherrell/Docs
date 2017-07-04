@@ -11,7 +11,6 @@ DocOptions.prototype.getDoctors = function(medicalIssue, apiKey) {
     if (result.data.length === 0) {
       $('#listOfDocs').append('<li>Sorry, no doctors found.</li>')
     } else {
-    console.log(result.data.length);
       for (i=0; i<result.data.length; i++) {
         $('#listOfDocs').append('<li>' + '<h4>' + result.data[i].profile.first_name + ' ' + result.data[i].profile.last_name + '<h4>' + '</li>');
         console.log(result);
