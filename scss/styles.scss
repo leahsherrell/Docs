@@ -1,7 +1,8 @@
 $main-color: #5b3e66;
+$complimentary-color: rgba(76,116,106, .6);
 
 .container {
-  background-image: url(/img/lavender.jpg);
+  background-image: url(../../img/lavender.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -27,29 +28,42 @@ $main-color: #5b3e66;
     margin-top: 40px;
     font-size: 1.5em;
   }
-  button {
-    margin-top: 10px;
-  }
+
+
+
   form {
     width: 40%;
     margin: auto;
     button {
+      margin-top: 10px;
       color: $main-color;
       background-color: rgba(255, 255, 255, .7);
       border-radius: 5px;
-      border-color: rgba(76,116,106, .6);
+      border-color: $complimentary-color;
       height: 30px;
       width: 100px;
       font-size: 1.2em;
+      &:hover {
+        color: #fff;
+        background-color: $complimentary-color;
+      }
+      &:focus {
+        outline: none;
+        color: $main-color;
+        background-color: rgba(255, 255, 255, .7);
+        border-color: $complimentary-color;
+      }
+    }
+    input {
+      color: $main-color;
     }
     input:focus {
       border-color: rgba(76,116,106, .9);
     }
   }
 
-}
+  ul {
+    list-style: none;
+  }
 
-ul {
-  text-decoration: none;
-  color: #fff;
 }
