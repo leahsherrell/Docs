@@ -31,6 +31,8 @@ Alternatively, using the command line:
   - run 'npm install' command
   - run 'bower install' command
   - run 'gulp build' command
+  - get an api key from https://developer.betterdoctor.com/, place it in the quotation marks within this expression: exports.apiKey = '';
+  - create a .env file in the head directory and place the completed above expression in that, save
   - open index.html in a web browser
 
 ### License
